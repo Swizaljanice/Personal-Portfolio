@@ -1,0 +1,142 @@
+.projects-section {
+  padding: 40px;
+  background: linear-gradient(180deg, rgb(20, 10, 15) 0%, rgb(41, 21, 31) 100%);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects-header h2 {
+  font-size: 40px;
+  color: rgb(92, 32, 57);
+  text-shadow: 0 0 10px rgba(92, 32, 57, 0.8);
+}
+
+.projects-header p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 0;
+  scrollbar-width: none;
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-card {
+  background: rgba(92, 32, 57, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 320px;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(112, 31, 65, 0.85);
+  margin-bottom: 12px;
+}
+
+.language {
+  background-color: rgba(188, 157, 171, 0.85);
+  color: #32061f;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 14px;
+  margin-bottom: 14px;
+  color: #e6e6e6;
+}
+
+.code-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(92, 32, 57);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  gap: 6px;
+  border: 1px solid #fff;
+}
+
+.code-btn:hover {
+  background-color: rgba(72, 33, 49, 0.85);
+  border-color: #fff;
+}
+
+.scroll-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.scroll-btn {
+  background-color: rgb(92, 32, 57);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(92, 32, 57, 0.85);
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.view-all a {
+  background-color: rgb(92, 32, 57);
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #fff;
+}
+
+.view-all a:hover {
+  background-color: #ff4d88;
+}

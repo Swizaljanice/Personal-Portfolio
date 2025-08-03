@@ -1,0 +1,96 @@
+.contact-section {
+  padding: 3rem;
+  background: linear-gradient(180deg, rgb(20, 10, 15) 0%, rgb(41, 21, 31) 100%);
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 40px;
+  color: rgb(255, 200, 220);
+  text-shadow: 0 0 10px rgba(92, 32, 57, 0.8);
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #dddddd;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: rgb(255, 180, 200);
+}
+
+.contact-form {
+  background: linear-gradient(180deg, rgb(61, 15, 40) 0%, rgb(92, 32, 57) 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(92, 32, 57, 0.6);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1e1e2f;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1e1e2f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  background-color: rgb(92, 32, 57);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(123, 45, 76);
+}
+
+.status-message {
+  margin-top: 1rem;
+  color: #ffc107;
+}
