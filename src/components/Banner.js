@@ -62,7 +62,7 @@ export const Banner = () => {
             </div>
 
             <a
-              href="https://swizaljanice.github.io/Personal-Portfolio/Swizal_SoftwareEngineer.pdf"
+              href="/Personal-Portfolio/SwizalJanice_SoftwareEngineer.pdf"
               download="Swizal_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
