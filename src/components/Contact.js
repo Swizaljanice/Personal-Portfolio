@@ -44,21 +44,28 @@ const Contact = () => {
 
       <div className="contact-info">
         <div className="info-item">
+          <a href="mailto:swizaljanice100@gmail.com" target="_blank" rel="noopener noreferrer">
           <FaEnvelope className="icon" />
+          </a>
           <div>
+            
             <strong>Email</strong>
             <p>swizaljanice100@gmail.com</p>
           </div>
         </div>
         <div className="info-item">
+          <a href="https://github.com/Swizaljanice" target="_blank" rel="noopener noreferrer">
           <FaGithub className="icon" />
+          </a>
           <div>
             <strong>GitHub</strong>
             <p>Swizaljanice</p>
           </div>
         </div>
         <div className="info-item">
+          <a href="https://www.linkedin.com/in/swizal" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="icon" />
+          </a>
           <div>
             <strong>LinkedIn</strong>
             <p>Swizal Dsouza</p>

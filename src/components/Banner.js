@@ -8,7 +8,7 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Web Developer", "Java Developer", "UI/UX Designer"];
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
@@ -31,7 +31,7 @@ export const Banner = () => {
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setDelta(period);
-    } else if (isDeleting && updatedText === '') {
+    } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setDelta(500);
@@ -45,21 +45,36 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7} style={{ marginTop: "80px" }}>
             <span className="tagline">Welcome to My Portfolio</span>
             <h1>
-              {`Hi, I'm Swizal Janice Dsouza `}<span className="wrap">{text}</span>
+              {`Hi, I'm Swizal Janice Dsouza `}
+              <span className="wrap">{text}</span>
             </h1>
-            <p>Passionate about technology and building practical solutions through code. Always eager to learn, explore new tools, and take on real-world challenges.
-               This portfolio highlights key projects and skills developed along the way.</p>
+            <p>
+              Passionate about technology and building practical solutions
+              through code. Always eager to learn, explore new tools, and take
+              on real-world challenges. This portfolio highlights key projects
+              and skills developed along the way.
+            </p>
+            <div className="d-md-none text-center mb-4">
+              <div className="animated-circle">
+                <div className="glow-ring"></div>
+                <img src={profile} alt="My Profile" className="profile-photo" />
+              </div>
+            </div>
+
             <a
-                href="/SwizalJanice_SoftwareEngineer.pdf"
-                download="Swizal_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume-button"
-              >
-            Download My Resume  &nbsp;&nbsp;&nbsp;<Download size={25}/>
-          </a>
+              href="/Swizal_SoftwareEngineer.pdf"
+              download="Swizal_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-button"
+            >
+              Download My Resume &nbsp;&nbsp;&nbsp;
+              <Download size={25} />
+            </a>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+
+         
+          <Col xs={12} md={6} xl={5} className="d-none d-md-block">
             <div className="animated-circle">
               <div className="glow-ring"></div>
               <img src={profile} alt="My Profile" className="profile-photo" />

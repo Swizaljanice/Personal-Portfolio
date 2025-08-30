@@ -6,6 +6,24 @@ import "../styles/NavBar.css";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+  function handleClickOutside(event) {
+    // If menu is open
+    if (expanded) {
+      // You can refine this by checking event.target's ancestors
+      const navbar = document.getElementById('basic-navbar-nav');
+      if (navbar && !navbar.contains(event.target)) {
+        setExpanded(false);
+      }
+    }
+  }
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => document.removeEventListener('mousedown', handleClickOutside);
+}, [expanded]);
+
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -28,7 +46,8 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" collapseOnSelect className={scrolled ? "scrolled navbar-black" : "navbar-black"}>
+    <Navbar expand="lg" collapseOnSelect className={scrolled ? "scrolled navbar-black" : "navbar-black"} expanded={expanded}
+  onToggle={() => setExpanded(!expanded)}>
       <Container>
         <Navbar.Brand href="#home">
          
@@ -38,21 +57,24 @@ export const NavBar = () => {
           <Nav className="me-auto">
             <a
               href="#home"
-              onClick={() => setActiveLink("home")}
+              onClick={() => {
+                setActiveLink("home");
+                setExpanded(false);
+              }}              
               className={`nav-link ${activeLink === "home" ? "active" : ""}`}
             >
               <FaHome /> Home
             </a>
             <a
               href="#techstack"
-              onClick={() => setActiveLink("techstack")}
+              onClick={() =>{ setActiveLink("techstack"); setExpanded(false);}}
               className={`nav-link ${activeLink === "techstack" ? "active" : ""}`}
             >
               <FaCode /> Tech Stack
             </a>
             <a
               href="#projects"
-              onClick={() => setActiveLink("projects")}
+              onClick={() => {setActiveLink("projects"); setExpanded(false);}}
               className={`nav-link ${activeLink === "projects" ? "active" : ""}`}
             >
               <FaProjectDiagram /> Projects
